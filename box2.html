@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイドバー固定</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: antiquewhite;
+            position: fixed;
+            z-index: 100;
+        }
+
+        .wrapper {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .main {
+            width: calc(100% - 300px);
+            height: 3000px;
+            background-color: #ff4e4e;
+            background-image: url(img1.jpg);
+        }
+
+        .sidebar {
+            width: 280px;
+        }
+
+        .widget {
+           margin-top: 100px;
+            height: 580px;
+    
+            background-color: rgb(197, 114, 6);
+        }
+
+        .widget:last-child {
+            margin-bottom: 0;
+        }
+
+        .widget--sticky {
+            position: sticky;
+            top: 100px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            height: 1300px;
+            background-color: #ad7100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header"></header>
+        <div class="wrapper">
+            <aside class="sidebar">
+                <div class="widget widget--sticky"></div>
+            </aside>
+            <main class="main"></main>
+          
+        </div>
+        <footer class="footer"></footer>
+    </div>
+</body>
+
+</html>
